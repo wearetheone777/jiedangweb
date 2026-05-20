@@ -1,6 +1,6 @@
 <template>
   <section id="services" class="py-24 px-4 bg-space-dark relative">
-    <div class="max-w-6xl mx-auto">
+    <div ref="el" :class="['max-w-6xl mx-auto transition-all duration-700', isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8']">
       <!-- 区块标题 -->
       <div class="flex items-center gap-4 mb-16">
         <span class="font-mono text-xs text-accent-teal tracking-widest">02.</span>
@@ -60,4 +60,7 @@
 
 <script setup>
 import { siteConfig as site } from '../data/siteData.js'
+import { useScrollReveal } from '../composables/useScrollReveal.js'
+
+const { el, isRevealed } = useScrollReveal()
 </script>

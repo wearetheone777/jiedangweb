@@ -5,7 +5,7 @@
       <span class="font-mono text-[12vw] font-bold text-space-border/20">CONTACT</span>
     </div>
 
-    <div class="max-w-2xl mx-auto relative z-10">
+    <div ref="el" :class="['max-w-2xl mx-auto relative z-10 transition-all duration-700', isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8']">
       <!-- 区块标题 -->
       <div class="flex items-center gap-4 mb-16">
         <span class="font-mono text-xs text-accent-teal tracking-widest">04.</span>
@@ -76,4 +76,7 @@
 
 <script setup>
 import { siteConfig as site } from '../data/siteData.js'
+import { useScrollReveal } from '../composables/useScrollReveal.js'
+
+const { el, isRevealed } = useScrollReveal()
 </script>
