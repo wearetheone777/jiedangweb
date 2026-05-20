@@ -1,26 +1,26 @@
 export default {
   nav: {
-    home: 'HOME',
-    about: 'ABOUT',
-    services: 'SERVICES',
-    works: 'WORKS',
-    contact: 'CONTACT',
+    home: '首页',
+    about: '关于',
+    services: '服务',
+    works: '作品',
+    contact: '联系',
   },
 
   hero: {
-    tagline: 'FREELANCE DEVELOPER',
+    tagline: '自由开发者',
     title: '接单开发',
     subtitle: '专业编程服务',
     description: '高质量网站开发 · 毕业设计辅导 · 小程序定制 · 程序代写',
     ctaContact: '联系我',
     ctaWorks: '查看作品',
-    scroll: 'SCROLL',
+    scroll: '下滑浏览',
   },
 
   about: {
     num: '01.',
-    heading: 'ABOUT',
-    skills: 'SKILLS',
+    heading: '关于',
+    skills: '技能',
     statsYears: '年开发经验',
     statsProjects: '完成项目',
     statsClients: '满意客户',
@@ -32,7 +32,7 @@ export default {
 
   services: {
     num: '02.',
-    heading: 'SERVICES',
+    heading: '服务',
     items: [
       {
         title: '网站开发',
@@ -55,10 +55,10 @@ export default {
 
   portfolio: {
     num: '03.',
-    heading: 'WORKS',
+    heading: '作品',
     all: '全部',
-    previewPlaceholder: 'PROJECT PREVIEW',
-    screenshot: 'PROJECT SCREENSHOT',
+    previewPlaceholder: '项目预览',
+    screenshot: '项目截图',
     empty: '暂无该项目分类的作品',
     detailHint: '如需查看更多详情，请联系我获取完整案例',
     items: [
@@ -91,7 +91,7 @@ export default {
 
   contact: {
     num: '04.',
-    heading: 'CONTACT',
+    heading: '联系',
     wechat: '微信',
     email: '邮箱',
     qq: 'QQ',

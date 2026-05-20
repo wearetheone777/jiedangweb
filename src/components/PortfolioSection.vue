@@ -110,18 +110,22 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useI18n } from '../i18n/index.js'
 import { useScrollReveal } from '../composables/useScrollReveal.js'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const { el, isRevealed } = useScrollReveal()
 
 const activeCategory = ref('')
 const selectedProject = ref(null)
 
-// 初始化默认分类
 activeCategory.value = t.value.portfolio.all
+
+// 语言切换时重置分类筛选
+watch(locale, () => {
+  activeCategory.value = t.value.portfolio.all
+})
 
 const categories = computed(() => {
   const cats = [t.value.portfolio.all, ...new Set(t.value.portfolio.items.map(p => p.category))]
