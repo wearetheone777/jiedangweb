@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== 全局基础样式 ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== 自定义滚动条 ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #252530;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a48;
+}
+
+/* ===== 扫描线效果 ===== */
+.scanline-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+/* ===== 六边形网格背景 ===== */
+.hex-grid {
+  background-image:
+    linear-gradient(60deg, rgba(37, 37, 48, 0.3) 1px, transparent 1px),
+    linear-gradient(-60deg, rgba(37, 37, 48, 0.3) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(37, 37, 48, 0.15) 1px, transparent 1px);
+  background-size: 40px 69px, 40px 69px, 80px 80px;
+}
+
+/* ===== 文字光效 ===== */
+.text-glow-teal {
+  text-shadow: 0 0 20px rgba(0, 191, 165, 0.3);
+}
+.text-glow-amber {
+  text-shadow: 0 0 20px rgba(255, 109, 0, 0.3);
+}
+
+/* ===== 卡片悬浮光效 ===== */
+.card-glow:hover {
+  box-shadow: 0 0 30px rgba(0, 191, 165, 0.08), 0 0 60px rgba(0, 191, 165, 0.03);
+}
+
+/* ===== 边框发光 ===== */
+.border-glow {
+  border-color: rgba(0, 191, 165, 0.2);
+  transition: border-color 0.3s ease;
+}
+.border-glow:hover {
+  border-color: rgba(0, 191, 165, 0.5);
+}
