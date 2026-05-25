@@ -79,7 +79,7 @@ export default {
       },
       {
         category: '小程序/App',
-        title: '锐安动检（锐眼洞见）',
+        title: '锐眼洞见',
         desc: '移动端 AI 安全检测应用，支持文本/图片/音频/视频四种检测，基于 UniApp 跨平台框架多端运行。',
         tags: ['UniApp', 'Vue 2', 'uView-UI', 'Vuex', 'ECharts'],
       },

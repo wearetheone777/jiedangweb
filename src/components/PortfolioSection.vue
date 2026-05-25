@@ -30,15 +30,10 @@
                  hover:border-accent-teal/30 transition-all duration-500
                  hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(0,191,165,0.05)]"
           @click="openProject(projectIds[idx])">
-          <!-- 项目占位图 -->
-          <div class="mb-5 h-36 bg-space-dark border border-space-border flex items-center justify-center
+          <!-- 项目封面图 -->
+          <div class="mb-5 h-36 border border-space-border
                       group-hover:border-accent-teal/20 transition-colors duration-500 overflow-hidden">
-            <div class="flex flex-col items-center gap-2 text-space-border group-hover:text-accent-teal/10 transition-colors">
-              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                <rect x="3" y="3" width="18" height="18" rx="2"/>
-                <circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
-              </svg>
-            </div>
+            <ProjectThumbnail :type="projectIds[idx]" class="w-full h-full" />
           </div>
 
           <div class="font-mono text-xs text-accent-teal mb-2 tracking-wider">{{ p.category }}</div>
@@ -79,6 +74,7 @@ import { useI18n } from '../i18n/index.js'
 import { useScrollReveal } from '../composables/useScrollReveal.js'
 import { useProjectView } from '../composables/useProjectView.js'
 import { projects } from '../data/projects.js'
+import ProjectThumbnail from './ProjectThumbnail.vue'
 
 const { t, locale } = useI18n()
 const { el, isRevealed } = useScrollReveal()

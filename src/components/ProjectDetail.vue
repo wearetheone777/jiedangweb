@@ -71,13 +71,8 @@
           <div class="grid md:grid-cols-3 gap-4">
             <div v-for="ss in project.screenshots" :key="ss.label"
                  class="border border-space-border bg-space-dark overflow-hidden group cursor-default">
-              <div class="h-32 flex items-center justify-center bg-space-dark/50">
-                <div class="flex flex-col items-center gap-2 text-space-border">
-                  <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                    <rect x="3" y="3" width="18" height="18" rx="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
-                  </svg>
-                </div>
+              <div class="h-32 flex items-center justify-center overflow-hidden">
+                <ScreenshotMockup :project-id="selectedProjectId" :type="ss.mockupType" class="w-full h-full" />
               </div>
               <div class="p-3">
                 <div class="font-mono text-xs text-accent-teal mb-1">{{ ss.labelTxt }}</div>
@@ -108,6 +103,7 @@ import { computed } from 'vue'
 import { useI18n } from '../i18n/index.js'
 import { useProjectView } from '../composables/useProjectView.js'
 import { getProjectById } from '../data/projects.js'
+import ScreenshotMockup from './ScreenshotMockup.vue'
 
 const { t, locale } = useI18n()
 const { selectedProjectId, closeProject } = useProjectView()
@@ -133,6 +129,7 @@ const project = computed(() => {
     screenshots: raw.screenshots.map(s => ({
       labelTxt: isZh.value ? s.label : s.labelEn,
       descTxt: isZh.value ? s.desc : s.descEn,
+      mockupType: s.mockupType || 'dashboard',
     })),
   }
 })

@@ -2,6 +2,7 @@
  * 项目完整数据
  * 每个项目包含首页概览和详情页完整信息
  */
+
 export const projects = [
   {
     id: 'ip-manage',
@@ -35,10 +36,10 @@ export const projects = [
       { label: '代码质量', labelEn: 'Code Quality', value: 'TypeScript + ESLint + Prettier + Husky' },
     ],
     screenshots: [
-      { label: '工作台', labelEn: 'Dashboard', desc: '数据总览 + 预警提醒面板' },
-      { label: '专利维护列表', labelEn: 'Patent List', desc: 'ProTable 分页检索 + 搜索引擎' },
-      { label: '人员溯源图谱', labelEn: 'Traceability Graph', desc: 'G6 关系图谱展示人员关联' },
-      { label: '统计分析', labelEn: 'Statistics', desc: '多维度图表分析页面' },
+      { label: '工作台', labelEn: 'Dashboard', desc: '数据总览 + 预警提醒面板', mockupType: 'dashboard' },
+      { label: '专利维护列表', labelEn: 'Patent List', desc: 'ProTable 分页检索 + 搜索引擎', mockupType: 'table' },
+      { label: '人员溯源图谱', labelEn: 'Traceability Graph', desc: 'G6 关系图谱展示人员关联', mockupType: 'graph' },
+      { label: '统计分析', labelEn: 'Statistics', desc: '多维度图表分析页面', mockupType: 'chart' },
     ],
   },
   {
@@ -71,20 +72,20 @@ export const projects = [
       { label: '代码质量', labelEn: 'Code Quality', value: 'TypeScript + ESLint + Prettier' },
     ],
     screenshots: [
-      { label: '项目检索列表', labelEn: 'Project Search List', desc: 'ProTable 多条件筛选 + 分页展示' },
-      { label: '装备分类树', labelEn: 'Equipment Type Tree', desc: 'Ant Design Tree 树形层级管理' },
-      { label: '报审价流程', labelEn: 'Review & Pricing Flow', desc: '多步骤表单 + 状态控制流程' },
+      { label: '项目检索列表', labelEn: 'Project Search List', desc: 'ProTable 多条件筛选 + 分页展示', mockupType: 'table' },
+      { label: '装备分类树', labelEn: 'Equipment Type Tree', desc: 'Ant Design Tree 树形层级管理', mockupType: 'tree' },
+      { label: '报审价流程', labelEn: 'Review & Pricing Flow', desc: '多步骤表单 + 状态控制流程', mockupType: 'form' },
     ],
   },
   {
     id: 'ruiyan',
     category: '小程序/App',
     categoryEn: 'Mini Program/App',
-    title: '锐安动检（锐眼洞见）',
+    title: '锐眼洞见',
     titleEn: 'RuiYan AI Security Detection',
     brief: '移动端 AI 安全检测应用，支持文本/图片/音频/视频四种检测，基于 UniApp 跨平台框架多端运行。',
     briefEn: 'Cross-platform mobile AI security detection app supporting text, image, audio, and video analysis with UniApp framework.',
-    description: '锐安动检（锐眼洞见）是北京锐安科技有限公司开发的移动端 AI 安全检测应用，基于 UniApp 跨平台框架，支持微信小程序、H5 和 App 多端运行。应用提供 AI 安全服务（文本检测、图片检测、音频检测、视频检测）和经典安全服务两大类，采用按次付费 + 免费试用的商业模式。',
+    description: '锐眼洞见是北京锐安科技有限公司开发的移动端 AI 安全检测应用，基于 UniApp 跨平台框架，支持微信小程序、H5 和 App 多端运行。应用提供 AI 安全服务（文本检测、图片检测、音频检测、视频检测）和经典安全服务两大类，采用按次付费 + 免费试用的商业模式。',
     descriptionEn: 'A mobile AI security detection app developed by Beijing RuiAn Technology. Built with UniApp cross-platform framework supporting WeChat Mini Program, H5, and native App. Offers four AI detection services (text, image, audio, video) with a pay-per-use plus free trial model.',
     tech: ['UniApp', 'Vue 2', 'uView-UI', 'uni-ui', 'Vuex', 'ECharts'],
     features: [
@@ -105,9 +106,9 @@ export const projects = [
       { label: '分包策略', labelEn: 'Subpackage Strategy', value: '主包 + pages-login/pages-my/pages-result 分包' },
     ],
     screenshots: [
-      { label: 'AI 安全服务首页', labelEn: 'AI Service Home', desc: '四种检测类型入口' },
-      { label: '检测结果', labelEn: 'Detection Result', desc: '风险等级标识 + 详情展开' },
-      { label: '个人中心', labelEn: 'Profile Center', desc: '用户信息和订单入口' },
+      { label: 'AI 安全服务首页', labelEn: 'AI Service Home', desc: '四种检测类型入口', mockupType: 'mobile-home' },
+      { label: '检测结果', labelEn: 'Detection Result', desc: '风险等级标识 + 详情展开', mockupType: 'mobile-list' },
+      { label: '个人中心', labelEn: 'Profile Center', desc: '用户信息和订单入口', mockupType: 'mobile-profile' },
     ],
   },
   {
@@ -141,9 +142,9 @@ export const projects = [
       { label: '角色系统', labelEn: 'Role System', value: '建设单位/施工单位/监理单位/设计单位四种角色' },
     ],
     screenshots: [
-      { label: '功能导航首页', labelEn: 'Home Navigation', desc: '角色驱动的功能入口面板' },
-      { label: '审批时间线', labelEn: 'Approval Timeline', desc: '多级审批进度展示' },
-      { label: '项目详情', labelEn: 'Project Details', desc: '多 Tab 项目信息展示' },
+      { label: '功能导航首页', labelEn: 'Home Navigation', desc: '角色驱动的功能入口面板', mockupType: 'mobile-home' },
+      { label: '审批时间线', labelEn: 'Approval Timeline', desc: '多级审批进度展示', mockupType: 'mobile-list' },
+      { label: '项目详情', labelEn: 'Project Details', desc: '多 Tab 项目信息展示', mockupType: 'mobile-detail' },
     ],
   },
 ]
