@@ -66,24 +66,28 @@ export default {
     // 首页卡片使用精简描述，点击跳转详情页
     items: [
       {
+        id: 'ip-manage',
         category: '网站开发',
         title: '知识产权资产管理系统',
         desc: '企业级 IP 资产管理前端应用，覆盖专利/软著维护、代理机构管理、预警预告、统计分析等模块。',
         tags: ['UmiJS', 'React 18', 'Ant Design 5', 'TypeScript', 'AntV G2/G6'],
       },
       {
+        id: 'equip-price',
         category: '网站开发',
         title: '装备价格数据管理系统',
         desc: '专业化装备价格管理平台，涵盖装备分类管理、数据参数维护、项目报价/审价/评审价全流程管理，以及项目检索与数据分析功能。',
         tags: ['React 18', 'UmiJS', 'Ant Design 5', 'TypeScript', 'ECharts'],
       },
       {
+        id: 'ruiyan',
         category: '小程序/App',
         title: '锐眼洞见',
         desc: '移动端 AI 安全检测应用，支持文本/图片/音频/视频四种检测，基于 UniApp 跨平台框架多端运行。',
         tags: ['UniApp', 'Vue 2', 'uView-UI', 'Vuex', 'ECharts'],
       },
       {
+        id: 'xmgl',
         category: '小程序/App',
         title: '工程建设项目管理系统',
         desc: '工程建设移动端全生命周期管理工具，覆盖进度/安全/质量/合同等七大业务领域，支持多角色协同。',

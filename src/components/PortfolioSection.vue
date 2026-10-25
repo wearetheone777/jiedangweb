@@ -25,15 +25,15 @@
       <!-- 项目卡片网格 -->
       <div class="grid md:grid-cols-2 gap-6">
         <div
-          v-for="(p, idx) in filteredProjects" :key="p.title"
+          v-for="p in filteredProjects" :key="p.id"
           class="group p-6 border border-space-border bg-space-card cursor-pointer
                  hover:border-accent-teal/30 transition-all duration-500
                  hover:-translate-y-1 hover:shadow-[0_0_40px_rgba(0,191,165,0.05)]"
-          @click="openProject(projectIds[idx])">
+          @click="openProject(p.id)">
           <!-- 项目封面图 -->
           <div class="mb-5 h-36 border border-space-border
                       group-hover:border-accent-teal/20 transition-colors duration-500 overflow-hidden">
-            <ProjectThumbnail :type="projectIds[idx]" class="w-full h-full" />
+            <ProjectThumbnail :type="p.id" class="w-full h-full" />
           </div>
 
           <div class="font-mono text-xs text-accent-teal mb-2 tracking-wider">{{ p.category }}</div>
@@ -73,7 +73,6 @@ import { ref, computed, watch } from 'vue'
 import { useI18n } from '../i18n/index.js'
 import { useScrollReveal } from '../composables/useScrollReveal.js'
 import { useProjectView } from '../composables/useProjectView.js'
-import { projects } from '../data/projects.js'
 import ProjectThumbnail from './ProjectThumbnail.vue'
 
 const { t, locale } = useI18n()
@@ -81,9 +80,6 @@ const { el, isRevealed } = useScrollReveal()
 const { openProject } = useProjectView()
 
 const activeCategory = ref('')
-
-// 用 data/projects.js 的 id 顺序对应 i18n 中的 item 顺序
-const projectIds = projects.map(p => p.id)
 
 // 初始化时设置默认分类
 watch(() => t.value.portfolio.all, (val) => {

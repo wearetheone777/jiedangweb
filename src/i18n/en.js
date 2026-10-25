@@ -65,24 +65,28 @@ export default {
     screenshots: 'Screenshots',
     items: [
       {
+        id: 'ip-manage',
         category: 'Web Dev',
         title: 'IP Asset Management System',
         desc: 'Enterprise IP asset management frontend covering patent/software maintenance, agency management, statistical analysis, and more.',
         tags: ['UmiJS', 'React 18', 'Ant Design 5', 'TypeScript', 'AntV G2/G6'],
       },
       {
+        id: 'equip-price',
         category: 'Web Dev',
         title: 'Equipment Price Data Management System',
         desc: 'Professional equipment price management platform covering equipment classification, data parameters, full quotation/review/evaluation workflow, and project search with data analysis.',
         tags: ['React 18', 'UmiJS', 'Ant Design 5', 'TypeScript', 'ECharts'],
       },
       {
+        id: 'ruiyan',
         category: 'Mini Program/App',
         title: 'RuiYan AI Security Detection',
         desc: 'Cross-platform mobile AI security detection app supporting text, image, audio, and video analysis with UniApp.',
         tags: ['UniApp', 'Vue 2', 'uView-UI', 'Vuex', 'ECharts'],
       },
       {
+        id: 'xmgl',
         category: 'Mini Program/App',
         title: 'Construction Project Management',
         desc: 'Mobile full lifecycle management tool for construction covering progress, safety, quality, contracts, and more with multi-role collaboration.',
